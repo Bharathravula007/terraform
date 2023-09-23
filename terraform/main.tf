@@ -23,7 +23,7 @@ module "security" {
 
 resource "aws_instance" "myec2" {
     ami               = var.ami
-    instance_type     = var.instance_type
+    instance_type     = "t2.micro"
     subnet_id         = module.vpc.subnet.id
     vpc_security_group_ids =  [module.security.security.id]
     associate_public_ip_address = true
