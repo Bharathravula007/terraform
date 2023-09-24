@@ -19,6 +19,7 @@ resource "aws_subnet" "public_sub" {
   }
 }
 
+
 # private subnet
 
 resource "aws_subnet" "private_sub" {
