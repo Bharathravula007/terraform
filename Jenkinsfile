@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('gitcheck') {
             steps {
-              git 'https://github.com/ravimanchi0321/terraform.git'
+              git 'https://github.com/Bharathravula007/terraform.git'
             }
         }
 /*        stage('docker build') {
