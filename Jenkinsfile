@@ -7,7 +7,7 @@ pipeline {
                git credentialsId: 'gitHub', url: 'https://github.com/ravimanchi0321/terraform.git'
             }
         }
-        stage('docker build') {
+/*        stage('docker build') {
             steps {
                 sh 'docker build -t "$JOB_NAME":v1."$BUILD_ID" .'
                 sh 'docker tag "$JOB_NAME":v1."$BUILD_ID" ravikumarmanchi/"$JOB_NAME":v1."$BUILD_ID"'
@@ -22,6 +22,7 @@ pipeline {
             }
         }
         }
+*/        
         stage('terraform server') {
             environment {
                    AWS_ACCESS_KEY_ID     = credentials('jenkins-aws-secret-key-id')
@@ -45,6 +46,7 @@ pipeline {
         }
         
     }
+/*        
     stage('deploy') { 
         environment {
             DOCKER_CREDS = credentials 'docker_hub'
@@ -72,3 +74,4 @@ pipeline {
     }
 }
 }
+*/
