@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('gitcheck') {
             steps {
-               git credentialsId: 'gitHub', url: 'https://github.com/ravimanchi0321/terraform.git'
+              git 'https://github.com/ravimanchi0321/terraform.git'
             }
         }
 /*        stage('docker build') {
@@ -72,6 +72,7 @@ pipeline {
         }
     
     }
+ */   
 }
 }
-*/
+
