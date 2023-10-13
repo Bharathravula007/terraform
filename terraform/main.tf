@@ -27,7 +27,6 @@ resource "aws_instance" "myec2" {
     subnet_id         = module.vpc.subnet.id
     vpc_security_group_ids =  [module.security.security.id]
     associate_public_ip_address = true
-    
     key_name    = var.key_name
 
     tags = {
